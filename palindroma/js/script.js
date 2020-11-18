@@ -2,26 +2,24 @@
 // Chiedere all’utente di inserire una parola.
 // Creare una funzione per capire se la parola inserita è palindroma.
 
-var palindrom = prompt("Inserisci una parola palindroma");
-// palindrom.checkPalindrom();
+var parola = prompt("Inserisci una parola palindroma");
+console.log("Parola di partenza", parola);
+var confronto = checkPalindromo(parola);
 
-var fruits = "Banana";
-console.log(fruits);
-fruits.reverse();
-console.log(fruits);
+console.log(confronto);
+// Restituisce true se palindroma, false altrimenti
+function checkPalindromo(parola) {
+  var contrario = "";
 
-
-function checkPalindrom(palindrom)
-{
-
-    for( var i = palindrom.length; i > 0; i-- )
-    {
-        if( palindrom[i] = palindrom.charAt(palindrom.length)-1 )
-        {
-            document.write('the word is palindrome.');
-        }else{
-            document.write('the word is not palindrome!');
-        }
-    }
+  // Devo creare parola al contrario
+  for (var i = parola.length - 1; i >= 0; i--) {
+    contrario += parola[i];
+  }
+  console.log("Parola al contrario", contrario);
+  // Confronto parola e contrario per vedere se sono uguali
+  if (contrario.toLowerCase() == parolaMinuscola.toLowerCase()) {
+    return true;
+  } else {
+    return false;
+  }
 }
-;

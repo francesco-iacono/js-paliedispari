@@ -30,8 +30,6 @@ function numeriRandom(min, max) {
     var numero = Math.floor(Math.random() *(max - min)) + min;
     return numero;
 }
-
-
 // funzione somma
 function fxSomma(a, b) {
   var sommaNumeri = a + b;
